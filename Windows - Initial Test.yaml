@@ -1,0 +1,5 @@
+- name: Test Windows connectivity
+  hosts: windows
+  tasks:
+    - name: Run a simple command
+      ansible.windows.win_command: whoami
