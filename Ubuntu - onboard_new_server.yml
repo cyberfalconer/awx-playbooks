@@ -1,6 +1,6 @@
 ---
 - name: Onboard new Ubuntu server
-  hosts: "Ubuntu Servers"
+  hosts: all
   become: true
   vars:
     new_username: ansible
