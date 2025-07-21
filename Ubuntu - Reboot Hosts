@@ -1,0 +1,9 @@
+---
+- name: Reboot Ubuntu server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Reboot server
+      reboot:
+        msg: "Reboot initiated by AWX"
+        reboot_timeout: 600
