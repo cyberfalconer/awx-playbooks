@@ -1,0 +1,12 @@
+---
+- name: Check Fortinet Collections
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: List installed Ansible collections
+      command: ansible-galaxy collection list
+      register: result
+
+    - name: Show results
+      debug:
+        var: result.stdout_lines
